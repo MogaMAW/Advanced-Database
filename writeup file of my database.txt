@@ -1,0 +1,91 @@
+
+MOGA MUZAMIL ABDUL WAHAB S21B23/013 A94166
+
+HOSPITAL DATABASE MANAGEMENT SYSTEM:
+	A). I have created a hospital database consisting of eight(8) tables 
+1).doctor
+2).patient (This is my join table.)
+3).in_patient
+4).out_patient
+5).laboratory
+6).labs
+7).room
+8).room_category
+
+1).The table doctor has attributes doctor_id,names,age,address_location,gender.
+I inserted 20 entries into that table using names of BSCS students.
+eg. INSERT INTO doctor VALUES(110,'DR.GENSI COLLINS',38,'BUIKWE','MALE');
+
+The doctor_id is the primary key.
+
+2).The patient table has attributes patient_id,patient_type,names,age,gender,disease,address_location,doctor_id.
+The patient_id is the primary key.
+
+3).The in_patient table has attributes room_no,patient_id,date_of_admission,date_of_discharge,lab_no,bill,amount,balance.
+The patient_id is the primary key.
+
+4).The out_patient table has attributes patient_id,lab_no,date_of_admission,date_of_discharge,bill,amount,balance.
+The patient_id is the primary key.
+
+5).The laboratory table has attributes lab_id,patient_id,doctor_id,lab_type.
+The lab_id is the primary key.
+
+6).The labs table has lab_no,lab_name,lab_manager,amount.
+The lab_no is the primary key.
+
+7).The room table has attributes room_no,room_type.
+The room_no is the primary key.
+
+8).The room_category table has category_no,names.
+The category_no is the primary key.
+
+	B).I linked the tables making the patient table as the join table.
+
+JOINING THE TABLES (PRIMARY KEYS AND FOREIGN KEYS):
+
+ALTER TABLE patient ADD FOREIGN KEY (doctor_id) REFERENCES doctor(doctor_id) ON DELETE SET NULL;
+Linked table patient to table doctor.
+
+
+ALTER TABLE patient ADD FOREIGN KEY (patient_type) REFERENCES out_patient(patient_id) ON DELETE CASCADE;
+Linked table patient to out_patient.
+
+ALTER TABLE patient ADD FOREIGN KEY (patient_type) REFERENCES in_patient(patient_id) ON DELETE CASCADE;
+Linked table patient to in_patient.
+
+ALTER TABLE in_patient ADD FOREIGN KEY (room_no) REFERENCES room(room_no) ON DELETE CASCADE;
+Linked table in_patient to table room.
+
+ALTER TABLE room ADD FOREIGN KEY (room_type) REFERENCES room_category(category_no) ON DELETE SET NULL;
+Linked table room to table room_category.
+
+ALTER TABLE laboratory ADD FOREIGN KEY (patient_id) REFERENCES patient(patient_id) ON DELETE SET NULL;
+Linked table laboratory to table patient
+
+ALTER TABLE laboratory ADD FOREIGN KEY (doctor_id) REFERENCES doctor(doctor_id) ON DELETE SET NULL;
+Linked table laboratory to table doctor.
+
+ALTER TABLE laboratory ADD FOREIGN KEY (lab_type) REFERENCES labs(lab_no) ON DELETE SET NULL;
+Linked table laboratory to table labs.
+
+ALTER TABLE labs ADD FOREIGN KEY (lab_manager) REFERENCES doctor(doctor_id) ON DELETE SET NULL;
+Linked table labs to table doctor.
+
+	C).Generated a Google spreadsheet and people filled in and I obtained my CSV sample data.
+
+	D).Converted the data in the spreadsheet into a csv file using this code.
+
+
+
+
+
+
+
+	E).Now I have database with imported data.
+
+	F).5 Queries to run on my database
+
+
+
+
+

@@ -1,0 +1,111 @@
+
+#####These are the SQL codes for creating the database and tables
+
+CREATE TABLE patient(  
+    patient_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    patient_type INT,
+    names VARCHAR(255),
+    age INT,
+    gender VARCHAR(10),
+    disease VARCHAR(255),
+    address_location VARCHAR(255),
+    doctor_id INT
+
+);
+
+CREATE TABLE doctor(  
+    doctor_id INT NOT NULL PRIMARY KEY,
+    names VARCHAR(255),
+    age INT,
+    address_location VARCHAR(255),
+    gender VARCHAR(10)
+);
+
+
+CREATE TABLE in_patient(  
+    patient_id INT NOT NULL PRIMARY KEY,
+    room_no INT,
+    date_of_admission DATETIME,
+    date_of_discharge DATETIME,
+    lab_no INT, 
+    bill INT
+);
+
+CREATE TABLE out_patient(  
+    patient_id INT NOT NULL PRIMARY KEY,
+    lab_no INT, 
+    date_of_admission DATETIME,
+    date_of_discharge DATETIME,  
+    bill INT
+);
+
+
+CREATE TABLE room(  
+    room_no INT NOT NULL PRIMARY KEY,
+    room_type INT
+);
+
+
+
+CREATE TABLE room_category(  
+    category_no INT NOT NULL PRIMARY KEY,
+    names VARCHAR(255)
+);
+
+CREATE TABLE laboratory(  
+    lab_id INT NOT NULL PRIMARY KEY,
+    patient_id  INT, 
+    doctor_id INT,
+    lab_type INT
+);
+
+CREATE TABLE labs(  
+    lab_no INT NOT NULL PRIMARY KEY,
+    lab_name  VARCHAR(255), 
+    lab_manager INT,
+    amount INT
+);
+
+
+##### JOINING THE TABLES (PRIMARY KEYS AND FOREIGN KEYS):
+
+ALTER TABLE patient ADD FOREIGN KEY (doctor_id) REFERENCES doctor(doctor_id) ON DELETE SET NULL;
+ALTER TABLE patient ADD FOREIGN KEY (patient_type) REFERENCES out_patient(patient_id) ON DELETE CASCADE;
+ALTER TABLE patient ADD FOREIGN KEY (patient_type) REFERENCES in_patient(patient_id) ON DELETE CASCADE;
+ALTER TABLE in_patient ADD FOREIGN KEY (room_no) REFERENCES room(room_no) ON DELETE CASCADE;
+ALTER TABLE room ADD FOREIGN KEY (room_type) REFERENCES room_category(category_no) ON DELETE SET NULL;
+ALTER TABLE laboratory ADD FOREIGN KEY (patient_id) REFERENCES patient(patient_id) ON DELETE SET NULL;
+ALTER TABLE laboratory ADD FOREIGN KEY (doctor_id) REFERENCES doctor(doctor_id) ON DELETE SET NULL;
+ALTER TABLE laboratory ADD FOREIGN KEY (lab_type) REFERENCES labs(lab_no) ON DELETE SET NULL;
+ALTER TABLE labs ADD FOREIGN KEY (lab_manager) REFERENCES doctor(doctor_id) ON DELETE SET NULL;
+
+
+Entering data to the TABLE doctor
+### I entered 20 members from the BSCS class as Doctors of my database project.
+
+INSERT INTO doctor VALUES(110,'DR.GENSI COLLINS',38,'BUIKWE','MALE');
+INSERT INTO doctor VALUES(102,'DR.DESTINY AGUMA ',28,'BUKOMANSIMBI','FEMALE');
+INSERT INTO doctor VALUES(109,'DR.NSEREKO SARAH',48,'BUTAMBALA','FEMALE');
+INSERT INTO doctor VALUES(148,'DR.JAMUGISA PETER',32,'GOMBA','MALE');
+INSERT INTO doctor VALUES(121,'DR.ALLAN SMITH NIRINGIYE',27,'KALANGALA','MALE');
+INSERT INTO doctor VALUES(130,'DR.TRACY NAJJOBA',22,'KAMPALA','FEMALE');
+INSERT INTO doctor VALUES(200,'DR.DAPHINE KAMUSIIME',27,'AMURIA','FEMALE');
+
+INSERT INTO doctor VALUES(240,'DR.MUGANGA CHARLES',58,'BULAMBULI','MALE');
+INSERT INTO doctor VALUES(260,'DR.SEKAMATTE SOUL SOLOMON',40,'JINJA','MALE');
+
+INSERT INTO doctor VALUES(395,'DR.MUTUA BRIAN',66,'SOROTI','MALE');
+INSERT INTO doctor VALUES(381,'DR.ABIGAIL MULUNGI',24,'GULU','FEMALE');
+
+INSERT INTO doctor VALUES(309,'DR.KATUKUNDA ROCHELLE',32,'MOROTO','FEMALE');
+INSERT INTO doctor VALUES(318,'DR.ATWIINE TIRZAH',29,'BUSHENYI','FEMALE');
+
+INSERT INTO doctor VALUES(394,'DR.NABIL SENGOBA',46,'MASINDI','MALE');
+INSERT INTO doctor VALUES(399,'DR.IAN AKAMPA',49,'KISORO','MALE');
+
+INSERT INTO doctor VALUES(181,'DR.MARTHA ALINDA',25,'KIRUHURA','FEMALE');
+INSERT INTO doctor VALUES(192,'DR.DHELO DHEKANA',29,'MBARARA','MALE');
+INSERT INTO doctor VALUES(222,'DR.MARTIN KANARURA',68,'RUBIRIZI','MALE');
+INSERT INTO doctor VALUES(286,'DR.JOAN MULUNGI',58,'NTOROKO','FEMALE');
+INSERT INTO doctor VALUES(187,'DR.ABIDO EDMOND',36,'BUNDIBUGYO','FEMALE');
+
