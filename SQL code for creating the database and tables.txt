@@ -81,7 +81,7 @@ ALTER TABLE labs ADD FOREIGN KEY (lab_manager) REFERENCES doctor(doctor_id) ON D
 
 
 Entering data to the TABLE doctor
-### I entered 20 members from the BSCS class as Doctors of my database project.
+#### I entered 20 members from the BSCS class as Doctors of my database project.
 
 INSERT INTO doctor VALUES(110,'DR.GENSI COLLINS',38,'BUIKWE','MALE');
 INSERT INTO doctor VALUES(102,'DR.DESTINY AGUMA ',28,'BUKOMANSIMBI','FEMALE');
