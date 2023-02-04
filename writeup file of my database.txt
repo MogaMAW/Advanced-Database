@@ -21,7 +21,7 @@ The doctor_id is the primary key.
 2)The patient table has attributes patient_id,patient_type,names,age,gender,disease,address_location,doctor_id.
 The patient_id is the primary key.
 
-3).The in_patient table has attributes room_no,patient_id,date_of_admission,date_of_discharge,lab_no,bill,amount,balance.
+3)The in_patient table has attributes room_no,patient_id,date_of_admission,date_of_discharge,lab_no,bill,amount,balance.
 The patient_id is the primary key.
 
 4).The out_patient table has attributes patient_id,lab_no,date_of_admission,date_of_discharge,bill,amount,balance.
