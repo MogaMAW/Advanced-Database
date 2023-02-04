@@ -30,7 +30,7 @@ The patient_id is the primary key.
 5).The laboratory table has attributes lab_id,patient_id,doctor_id,lab_type.
 The lab_id is the primary key.
 
-6).The labs table has lab_no,lab_name,lab_manager,amount.
+6)The labs table has lab_no,lab_name,lab_manager,amount.
 The lab_no is the primary key.
 
 7)The room table has attributes room_no,room_type.
