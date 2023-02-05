@@ -39,7 +39,7 @@ The room_no is the primary key.
 8)The room_category table has category_no,names.
 The category_no is the primary key.
 
-	B).I linked the tables making the patient table as the join table.
+	B)I linked the tables making the patient table as the join table.
 
 JOINING THE TABLES (PRIMARY KEYS AND FOREIGN KEYS):
 
