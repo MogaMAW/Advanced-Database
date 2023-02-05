@@ -83,7 +83,7 @@ Linked table labs to table doctor.
 
 	E)Now I have database with imported data.
 
-	F).5 Queries to run on my database
+	F)5 Queries to run on my database
 
 
 
