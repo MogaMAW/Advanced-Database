@@ -65,7 +65,6 @@ CREATE TABLE labs(
     amount INT
 );
 
-
 #### JOINING THE TABLES (PRIMARY KEYS AND FOREIGN KEYS):
 
 ALTER TABLE patient ADD FOREIGN KEY (doctor_id) REFERENCES doctor(doctor_id) ON DELETE SET NULL;
