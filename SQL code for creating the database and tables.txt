@@ -1,5 +1,5 @@
 
-### These are the SQL codes for creating the database and tables.
+###  These are the SQL codes for creating the database and tables.
 
 CREATE TABLE patient(  
     patient_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
