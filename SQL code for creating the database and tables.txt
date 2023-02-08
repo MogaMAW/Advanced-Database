@@ -11,6 +11,7 @@ CREATE TABLE patient(
     address_location VARCHAR(255),
     doctor_id INT
 
+
 );
 
 CREATE TABLE doctor(  
