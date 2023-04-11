@@ -1,5 +1,6 @@
 ### These are the SQL codes for creating the database and tables.
 
+# creating table patients
 CREATE TABLE patient(  
     patient_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     patient_type INT,
