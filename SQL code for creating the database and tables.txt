@@ -41,6 +41,7 @@ CREATE TABLE out_patient(
     bill INT
 );
 
+#creating table room 
 CREATE TABLE room(  
     room_no INT NOT NULL PRIMARY KEY,
     room_type INT
