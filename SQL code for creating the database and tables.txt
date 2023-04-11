@@ -21,7 +21,7 @@ CREATE TABLE doctor(
     gender VARCHAR(10)
 );
 
-
+#creating table in_patient 
 CREATE TABLE in_patient(  
     patient_id INT NOT NULL PRIMARY KEY,
     room_no INT,
