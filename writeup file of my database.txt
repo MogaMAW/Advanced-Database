@@ -74,8 +74,6 @@ C)Generated a Google spreadsheet and people filled in and I obtained my CSV samp
 
 D)Converted the data in the spreadsheet into a csv file using this code.
 
-
-
 E)Now I have database with imported data.
 
 F)5 Queries to run on my database
