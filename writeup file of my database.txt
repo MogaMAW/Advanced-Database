@@ -70,7 +70,7 @@ Linked table laboratory to table labs.
 ALTER TABLE labs ADD FOREIGN KEY (lab_manager) REFERENCES doctor(doctor_id) ON DELETE SET NULL;
 Linked table labs to table doctor.
 
-	C)Generated a Google spreadsheet and people filled in and I obtained my CSV sample data.
+C)Generated a Google spreadsheet and people filled in and I obtained my CSV sample data.
 
 	D)Converted the data in the spreadsheet into a csv file using this code.
 
