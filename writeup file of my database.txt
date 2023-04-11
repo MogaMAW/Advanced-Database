@@ -72,7 +72,7 @@ Linked table labs to table doctor.
 
 C)Generated a Google spreadsheet and people filled in and I obtained my CSV sample data.
 
-	D)Converted the data in the spreadsheet into a csv file using this code.
+D)Converted the data in the spreadsheet into a csv file using this code.
 
 
 
