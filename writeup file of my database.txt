@@ -1,4 +1,6 @@
 MOGA MUZAMIL ABDUL WAHAB S21B23/013 A94166
+
+
 HOSPITAL DATABASE MANAGEMENT SYSTEM:
 	 A)I have created a hospital database consisting of eight(8) tables 
 1).doctor
