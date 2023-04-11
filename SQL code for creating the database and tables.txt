@@ -54,6 +54,7 @@ CREATE TABLE room_category(
     names VARCHAR(255)
 );
 
+#creating table laboratory
 CREATE TABLE laboratory(  
     lab_id INT NOT NULL PRIMARY KEY,
     patient_id  INT, 
