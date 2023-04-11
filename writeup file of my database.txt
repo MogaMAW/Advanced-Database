@@ -78,7 +78,7 @@ C)Generated a Google spreadsheet and people filled in and I obtained my CSV samp
 
 E)Now I have database with imported data.
 
-	F)5 Queries to run on my database
+F)5 Queries to run on my database
 
 
 
