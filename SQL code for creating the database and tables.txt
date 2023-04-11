@@ -1,4 +1,3 @@
-
 ### These are the SQL codes for creating the database and tables.
 
 CREATE TABLE patient(  
