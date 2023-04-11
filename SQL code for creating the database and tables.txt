@@ -31,6 +31,8 @@ CREATE TABLE in_patient(
     bill INT
 );
 
+
+#creating table out_patient 
 CREATE TABLE out_patient(  
     patient_id INT NOT NULL PRIMARY KEY,
     lab_no INT, 
