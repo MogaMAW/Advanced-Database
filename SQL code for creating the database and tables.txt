@@ -48,7 +48,7 @@ CREATE TABLE room(
 );
 
 
-
+#creating table room_category 
 CREATE TABLE room_category(  
     category_no INT NOT NULL PRIMARY KEY,
     names VARCHAR(255)
