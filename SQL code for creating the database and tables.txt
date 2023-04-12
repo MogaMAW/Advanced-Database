@@ -62,6 +62,7 @@ CREATE TABLE laboratory(
     lab_type INT
 );
 
+#creating table labs 
 CREATE TABLE labs(  
     lab_no INT NOT NULL PRIMARY KEY,
     lab_name  VARCHAR(255), 
