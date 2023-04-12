@@ -12,7 +12,6 @@ CREATE TABLE patient(
     doctor_id INT
 );
 
-
 #creating table doctor 
 CREATE TABLE doctor(  
     doctor_id INT NOT NULL PRIMARY KEY,
