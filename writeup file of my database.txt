@@ -17,6 +17,7 @@ eg. INSERT INTO doctor VALUES(110,'DR.GENSI COLLINS',38,'BUIKWE','MALE');
 
 The doctor_id is the primary key.
 
+
 2)The patient table has attributes patient_id,patient_type,names,age,gender,disease,address_location,doctor_id.
 The patient_id is the primary key.
 
